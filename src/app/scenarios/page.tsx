@@ -3,6 +3,10 @@ import { scenarios } from "@/data/sleep";
 export const metadata = {
   title: "상황별 수면 영양제 선택 가이드, 시차적응 스트레스성 불면 만성불면",
   description: "시차적응, 스트레스성 불면, 만성 불면 등 상황별로 멜라토닌과 마그네슘 중 무엇이 맞는지 정리했습니다.",
+  openGraph: {
+    title: "내 상황엔 뭐가 맞을까요",
+    description: "시차적응, 스트레스성 불면, 만성 불면 등 상황별로 멜라토닌과 마그네슘 중 무엇이 맞는지 정리했습니다.",
+  },
 };
 
 export default function ScenariosPage() {

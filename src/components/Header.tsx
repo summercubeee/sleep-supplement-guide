@@ -3,6 +3,8 @@ import Link from "next/link";
 const navItems = [
   { href: "/compare", label: "성분 비교" },
   { href: "/scenarios", label: "상황별 선택" },
+  { href: "/questions", label: "다들 궁금해하는 질문" },
+  { href: "/my-case", label: "나는 어디 해당되는데?" },
   { href: "/sources", label: "출처" },
 ];
 

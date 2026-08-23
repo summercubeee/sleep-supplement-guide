@@ -1,3 +1,4 @@
+import { questions } from "@/data/questions";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
 function escapeXml(value: string) {
@@ -25,7 +26,13 @@ const items = [
 export async function GET() {
   const lastBuildDate = new Date("2026-08-23").toUTCString();
 
-  const itemsXml = items
+  const questionItems = questions.map((q) => ({
+    title: q.question,
+    link: `${SITE_URL}/${q.slug}`,
+    description: q.intro,
+  }));
+
+  const itemsXml = [...items, ...questionItems]
     .map(
       (item) => `
     <item>

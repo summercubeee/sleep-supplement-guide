@@ -1,8 +1,15 @@
 export const metadata = {
   title: "출처, 멜라토닌 vs 마그네슘 총정리",
+  description: "이 사이트의 정보에 대한 출처 목록입니다.",
+  openGraph: {
+    title: "출처",
+    description: "이 사이트의 정보에 대한 출처 목록입니다.",
+  },
 };
 
 const links = [
+  { title: "고마그네슘혈증, 서울아산병원(공식)", url: "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=32303" },
+  { title: "멜라토닌 처방받으려면 어느 과로 가야되나요, 하이닥", url: "https://mobile.hidoc.co.kr/healthqna/view/C0000738372" },
   { title: "멜라토닌, 나무위키", url: "https://namu.wiki/w/%EB%A9%9C%EB%9D%BC%ED%86%A0%EB%8B%88" },
   { title: "한국에서 멜라토닌이 건강기능식품으로 허가가 나지 않는 이유, 헬스경향", url: "http://www.k-health.com/news/articleView.html?idxno=90991" },
   { title: "전문의약품 멜라토닌 해외직구, 식약처 세관 규정, 헬스코리아뉴스", url: "https://www.hkn24.com/news/articleView.html?idxno=320131" },

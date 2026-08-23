@@ -3,6 +3,10 @@ import { supplements, faq } from "@/data/sleep";
 export const metadata = {
   title: "멜라토닌 마그네슘 차이, 작용 원리와 국내 구매 규정 총정리",
   description: "멜라토닌과 마그네슘의 작용 기전, 국내 구매/처방 규정을 비교했습니다.",
+  openGraph: {
+    title: "멜라토닌과 마그네슘, 근본적으로 다른 성분",
+    description: "멜라토닌과 마그네슘의 작용 기전, 국내 구매/처방 규정을 비교했습니다.",
+  },
 };
 
 export default function ComparePage() {
