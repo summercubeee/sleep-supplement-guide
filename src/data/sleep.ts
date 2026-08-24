@@ -1,11 +1,3 @@
-export interface Supplement {
-  name: string;
-  category: string;
-  mechanism: string;
-  koreaStatus: string;
-  bestFor: string;
-}
-
 export interface Scenario {
   situation: string;
   recommendation: string;
@@ -18,23 +10,6 @@ export interface FaqItem {
 }
 
 // 2026-08-23 기준 취합. 개인 건강상태에 따라 다를 수 있어 복용 전 전문가 상담을 권장합니다.
-export const supplements: Supplement[] = [
-  {
-    name: "멜라토닌",
-    category: "수면 유도 호르몬 보충",
-    mechanism: "뇌의 송과선에서 분비되는 수면 유도 호르몬을 외부에서 보충해 생체리듬(서카디안 리듬)을 조절",
-    koreaStatus: "국내에서는 전문의약품으로 분류돼 의사 처방이 있어야 구매 가능. 식물성 멜라토닌 함유 식품도 반입차단 대상 원료로 지정돼 있어 해외직구가 사실상 제한됨",
-    bestFor: "시차적응, 교대근무로 인한 생체리듬 붕괴, 불면증 진단을 받은 경우(처방 하에)",
-  },
-  {
-    name: "마그네슘",
-    category: "미네랄 보충(간접적 이완 보조)",
-    mechanism: "근육과 신경계의 긴장을 완화하는 미네랄로, 직접적인 수면 유도가 아니라 이완을 통한 간접적인 수면의 질 개선을 돕는다고 알려짐",
-    koreaStatus: "건강기능식품 또는 일반식품으로 유통, 약국/마트에서 자유롭게 구매 가능",
-    bestFor: "스트레스로 인한 근육 긴장, 잦은 뒤척임, 다리 저림 등으로 수면의 질이 떨어지는 경우",
-  },
-];
-
 export const scenarios: Scenario[] = [
   {
     situation: "해외여행 시차적응이 필요할 때",

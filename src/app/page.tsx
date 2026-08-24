@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { supplements } from "@/data/sleep";
+import { supplements } from "@/data/supplements";
 
 export default function Home() {
   return (
@@ -31,16 +31,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4 sm:grid-cols-2">
-        {supplements.map((s) => (
-          <div
-            key={s.name}
-            className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950"
-          >
-            <h3 className="mb-1 font-semibold text-indigo-600 dark:text-indigo-400">{s.name}</h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">{s.category}</p>
-          </div>
-        ))}
+      <section>
+        <div className="mb-5 flex items-baseline justify-between">
+          <h2 className="text-lg font-bold">이 사이트에서 다루는 수면 영양제 {supplements.length}가지</h2>
+          <Link href="/compare" className="text-sm text-indigo-600 hover:underline dark:text-indigo-400">
+            전체 비교표 보기 →
+          </Link>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {supplements.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/supplements/${s.slug}`}
+              className="rounded-2xl border border-zinc-200 bg-white p-5 transition-colors hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-950"
+            >
+              <div className="mb-1 flex items-center justify-between gap-2">
+                <h3 className="font-semibold text-indigo-600 dark:text-indigo-400">{s.name}</h3>
+                <span className="shrink-0 rounded-full bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400">
+                  근거 {s.evidenceLevel}
+                </span>
+              </div>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">{s.category}</p>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );

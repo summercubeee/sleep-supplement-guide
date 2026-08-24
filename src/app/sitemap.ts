@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { questions } from "@/data/questions";
+import { supplements } from "@/data/supplements";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,5 +19,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...questionRoutes];
+  const supplementRoutes: MetadataRoute.Sitemap = supplements.map((s) => ({
+    url: `${SITE_URL}/supplements/${s.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...questionRoutes, ...supplementRoutes];
 }

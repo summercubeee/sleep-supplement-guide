@@ -1,4 +1,5 @@
 import { questions } from "@/data/questions";
+import { supplements } from "@/data/supplements";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
 function escapeXml(value: string) {
@@ -32,7 +33,13 @@ export async function GET() {
     description: q.intro,
   }));
 
-  const itemsXml = [...items, ...questionItems]
+  const supplementItems = supplements.map((s) => ({
+    title: `${s.name} 수면 효과, 근거 논문과 국내 구매 규정`,
+    link: `${SITE_URL}/supplements/${s.slug}`,
+    description: s.evidenceSummary,
+  }));
+
+  const itemsXml = [...items, ...questionItems, ...supplementItems]
     .map(
       (item) => `
     <item>
