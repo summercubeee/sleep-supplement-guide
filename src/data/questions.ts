@@ -117,6 +117,29 @@ export const questions: Question[] = [
       { title: "마그네슘 분석, 흡수율과 복용 시 위험 신호, 소셜타임스", url: "https://www.esocialtimes.com/news/articleView.html?idxno=31462" },
     ],
   },
+  {
+    slug: "sleeping-pill-dependency-cbt-alternative",
+    category: "수면 관리",
+    question: "수면제 계속 먹으면 의존성이 생기나요, 대안은 없나요",
+    dateAnswered: "2026-08-23",
+    intro: "네, 의존성과 내성이 생길 수 있습니다. 국립정신건강센터는 불면증의 일차 치료로 인지행동치료(CBT-I)를 권장하고 있습니다.",
+    sections: [
+      {
+        heading: "의존성이란",
+        body: "처음엔 한 알로 충분했던 약이 시간이 지나며 효과가 떨어지고, 같은 효과를 위해 더 많은 양이 필요해지는 내성이 생길 수 있습니다. 중단했을 때 불쾌감을 피하려고 계속 약을 찾게 되는 것이 의존성입니다.",
+      },
+      {
+        heading: "인지행동치료(CBT-I)라는 대안",
+        body: "수면제한, 자극조절치료, 이완훈련, 인지전략, 수면위생 교육 등으로 구성된 인지행동치료는 부작용이 적고 효과에 대한 근거가 확립돼 있어 만성 불면증의 일차 치료로 점차 주목받고 있습니다. 전문의와 상담해 인지행동치료를 포함한 종합적인 치료 계획을 세우는 것이 바람직합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["melatonin-prescription-which-department"],
+    sources: [
+      { title: "수면제에 관한 오해와 진실, 국립정신건강센터(공식)", url: "https://ncmh.go.kr/ncmh/board/boardView.do?bn=newsView&fno=39&menu_cd=02_06_01&no=5068" },
+      { title: "불면증의 인지행동치료, 대한의사협회지", url: "https://jkma.org/journal/view.php?number=3144&viewtype=pubreader" },
+    ],
+  },
 ];
 
 export function getQuestion(slug: string): Question | undefined {
