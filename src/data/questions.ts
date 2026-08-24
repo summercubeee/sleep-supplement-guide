@@ -140,6 +140,50 @@ export const questions: Question[] = [
       { title: "불면증의 인지행동치료, 대한의사협회지", url: "https://jkma.org/journal/view.php?number=3144&viewtype=pubreader" },
     ],
   },
+  {
+    slug: "magnesium-elderly-meta-analysis-evidence",
+    category: "마그네슘",
+    question: "마그네슘 수면 효과, 진짜 논문으로 증명된 근거가 있나요",
+    dateAnswered: "2026-08-24",
+    intro: "네, 국제 학술지에 실린 메타분석 연구가 있습니다. 다만 잠드는 시간을 줄여주는 효과가 중심이고, 총 수면 시간을 늘려준다는 근거는 아직 명확하지 않습니다.",
+    sections: [
+      {
+        heading: "메타분석에서 확인된 수치",
+        body: "국제 학술지 BMC Complementary Medicine and Therapies에 실린 2021년 체계적 문헌고찰 및 메타분석에 따르면, 노인 151명을 대상으로 한 연구들을 종합한 결과 마그네슘 섭취군의 수면잠복시간(잠드는 데 걸리는 시간)이 평균 17.36분 줄어든 것으로 나타났습니다(95% 신뢰구간 -27.27~-7.44분, p=0.0006). 다만 총 수면시간의 증가폭(+16.06분)은 통계적으로 유의하지 않았습니다.",
+      },
+      {
+        heading: "누구에게 더 효과적인가",
+        body: "무작위 대조시험만 따로 분석했을 때, 평소 마그네슘 섭취가 부족했던 노인에게서 가장 일관된 효과가 확인됐습니다. 즉 마그네슘이 부족하지 않은 사람이라면 추가 섭취의 효과가 제한적일 수 있다는 뜻으로, 무조건적인 고용량 복용보다는 본인의 섭취 상태를 먼저 점검하는 것이 합리적입니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["magnesium-overdose-side-effects", "magnesium-type-difference"],
+    sources: [
+      { title: "Oral magnesium supplementation for insomnia in older adults: a Systematic Review and Meta-Analysis, BMC Complementary Medicine and Therapies", url: "https://link.springer.com/article/10.1186/s12906-021-03297-z" },
+    ],
+  },
+  {
+    slug: "melatonin-not-universal-sleep-aid",
+    category: "멜라토닌",
+    question: "멜라토닌 먹으면 아무 불면증이나 다 낫는다는게 맞나요",
+    dateAnswered: "2026-08-24",
+    intro: "아닙니다. 멜라토닌은 생체리듬이 깨진 경우(시차, 교대근무, 수면위상지연증후군 등)에 주로 효과가 확인된 약이지, 모든 불면증에 듣는 만능 수면제가 아닙니다.",
+    sections: [
+      {
+        heading: "가장 효과가 확인된 상황",
+        body: "수면의학 전문가들에 따르면 멜라토닌은 생체시계가 실제 시간과 어긋난 경우, 즉 해외여행으로 인한 시차, 밤낮이 바뀐 교대근무, 잠드는 시간 자체가 계속 늦어지는 수면위상지연증후군에서 상대적으로 효과가 뚜렷하게 확인돼 있습니다. 반면 스트레스나 불안, 노화로 인한 일반적인 불면증에서는 수면제만큼의 뚜렷한 효과가 보장되지 않습니다.",
+      },
+      {
+        heading: "정신과 질환에서의 보조적 활용",
+        body: "대한수면의학회 학술지에 실린 논문에 따르면 주요우울장애나 계절성 기분장애 등에서는 멜라토닌 분비 이상이 관찰되며, 이런 경우 항우울제의 부가 요법으로 활용되는 경우가 있습니다. 다만 이는 전문의의 진단과 처방 하에 이뤄지는 것으로, 스스로 판단해 복용량을 늘리는 것은 권장되지 않습니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["melatonin-prescription-which-department", "sleeping-pill-dependency-cbt-alternative"],
+    sources: [
+      { title: "김희진 교수의 수면의학, 멜라토닌은 만병통치약?, 헬스경향", url: "https://www.k-health.com/news/articleView.html?idxno=82615" },
+    ],
+  },
 ];
 
 export function getQuestion(slug: string): Question | undefined {
